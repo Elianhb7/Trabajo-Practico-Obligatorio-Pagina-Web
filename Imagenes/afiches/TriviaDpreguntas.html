@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+             integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+             <style>@font-face { font-family: Fujimaru-Regular; font-weight: bold; src: url('./font/Fujimaru-Regular.tff');}</style>
+             <title>Old Chinatown</title>
+        </head>
+    </head>
+    <body>
+        <script>
+            let q1 = 'Morihei Ueshiba';
+            let q2 = 'Masutatsu Oyama';
+            let q3 = 'Del norte de China';
+            let q4 = 'hiten mitsuruji Ryu';
+            let q5 = 'Jackye Chan';
+            let answer1 = document.getElementById("qFirst")
+            function quest1(){
+                let puntaje = 0;
+                if (document.getElementById("q1Third").checked){
+                    puntaje += 20;
+
+                };
+                if(document.getElementById("q2second").checked){
+                puntaje += 20;
+                };
+                if (document.getElementById("q3first").checked){
+                    puntaje +=20;
+                };
+                if (document.getElementById("q4third").checked){
+                    puntaje +=20;
+                }
+                if (document.getElementById("q5second").checked){
+                    puntaje +=20;
+               
+
+
+                
+                console.log(puntaje)
+            }
+         </script>
+        <div class="container-fluid">
+            <img style="width: 100%;max-height:300px;" src="./Imagenes/sol naciente.PNG" alt="sol naciente" class="img-fluid">
+        </div>
+        <div>
+            <div>
+                <label>¿Quien fue el fundador del Aikido?</label>
+                <input type="radio" name="question1"  value="Bruce Lee" id="q1First"/><label>Bruce Lee</label>
+                <input type="radio" name="question1"  value="Chojun Miyagi" id="q1Second"/><label>Chojun Miyagi</label>
+                <input type="radio" name="question1"  value="Morihei Ueshiba" id="q1Third"/><label>Morihei Ueshiba</label>
+            </div>
+            
+            <div>
+                
+                <label>¿Cual de estos Maestros fue el fundador del estilo Karate Kyokushinkai?</label>
+                <input type="radio" name="question2" id="q2first" value="Chojun Miyagi"/><label>Chojun Miyagi</label>
+                <input type="radio" name="question2"id="q2second" value="Masutatsu Oyama"/><label>Masutatsu Oyama</label>
+                <input type="radio" name="question2"id="q2third"  value="Gichin Funakoshi"/><label>Gihin Funakoshi</label>
+           
+            </div>
+            <div>
+                <label>¿De que Area Geografica de china proviene el estilo de Kung Fu shaolin?</label>
+                <input type="radio" name="question3" id="q3first"  value="Del norte de China"/><label>Del norte de China</label>
+                <input type="radio" name="question3" id="q3second" value="Del centro de China"/><label>Del norte de China</label>
+                <input type="radio" name="question3" id="q3third"  value="Del Sur de China"/><label>Del norte de China</label>
+            </div>
+
+            <div>
+            <label>¿Cual es el nombre del estilo de combate de esgrima de Ruronin Kenshin (Samurai X)?</label>
+                <input type="radio" name="question4" id="q4first"  value="Kyokugen Ryu"/><label>Kyokugen Ryu</label>
+                <input type="radio" name="question4" id="q4second" value="hokuto shinken Ryu"/><label>hokuto shinken Ryu</label>
+                <input type="radio" name="question4" id="q4third"  value="hiten mitsuruji Ryu"/><label>hiten mitsuruji Ryu</label>
+
+
+            </div>
+
+            <div>
+                <label>¿En que actor de artes marciales de cine, se inspiro Akira Toriyama para crear a
+                     Son Goku de la saga dragon ball?</label>
+                <input type="radio" name="question5" id="q5first" value="Bruce Lee"/><label>Bruce Lee</label>
+                <input type="radio" name="question5" id="q5second" value="Jackye Chan"/><label>Jackye Chan</label>
+                <input type="radio" name="question5" id="q5third" value="Sonni Chiba"/><label>Sonni Chiba</label>
+                
+                
+                
+            </div>
+
+            <button onclick="quest1()"> Probar </button>
+        </div>
+        <div class="container-fluid text-center">
+            <a href="./index.html">
+                Home</a>
+        </div>
+    </body>
+</html>
