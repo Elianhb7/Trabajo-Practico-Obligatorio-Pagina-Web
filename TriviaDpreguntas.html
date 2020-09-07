@@ -9,7 +9,7 @@
     </head>
     <body>
         <script>
-            
+
             let answer1 = document.getElementById("qFirst")
             function quest1()
             {
@@ -21,7 +21,7 @@
                 if(document.getElementById("q2second").checked){
                 puntaje += 20;
                 };
-                if (document.getElementById("q3first").checked){
+                if (document.getElementById("q3third").checked){
                     puntaje +=20;
                 };
                 if (document.getElementById("q4third").checked){
@@ -34,47 +34,47 @@
                 if (puntaje >= 60 ){
                     var v = document.getElementById("successMessage"); 
                     v.className += "alert alert-success";
-                    v.innerHTML = 'felicidades has ganado!'
+                    v.innerHTML = 'felicidades has ganado!' + 'tu puntaje es ' + puntaje
                 }
                 else{
                     var v = document.getElementById("successMessage"); 
                     v.className += "alert alert-danger";
-                    v.innerHTML = 'Derrota!'
+                    v.innerHTML = 'Derrota!'+ 'tu puntaje es ' + puntaje
                 }
                 console.log(puntaje)
            }
          </script>
         <div class="container-fluid">
-            <img style="width: 100%;max-height:300px;" src="./Imagenes/sol naciente.PNG" alt="sol naciente" class="img-fluid">
+            <img style="width: 100%;max-height:500px;" src="./Imagenes/pagina principal.png" alt="sol naciente" class="img-fluid" 
         </div>
         <div>
             <div>
                 <label>¿Quien fue el fundador del Aikido?</label>
-                <input type="radio" name="question1"  value="Bruce Lee" id="q1First"/><label>Bruce Lee</label>
-                <input type="radio" name="question1"  value="Chojun Miyagi" id="q1Second"/><label>Chojun Miyagi</label>
-                <input type="radio" name="question1"  value="Morihei Ueshiba" id="q1Third"/><label>Morihei Ueshiba</label>
+                <input type="radio" name="question1"  value="Bruce Lee" id="q1First"/>       <label> A --------> [    Bruce Lee      ]      </label>
+                <input type="radio" name="question1"  value="Chojun Miyagi" id="q1Second"/>  <label> B --------> [  Chojun Miyagi    ]  </label>
+                <input type="radio" name="question1"  value="Morihei Ueshiba" id="q1Third"/> <label> C --------> [  Morihei Ueshiba  ]</label>
             </div>
             
             <div>
                 
                 <label>¿Cual de estos Maestros fue el fundador del estilo Karate Kyokushinkai?</label>
-                <input type="radio" name="question2" id="q2first" value="Chojun Miyagi"/><label>Chojun Miyagi</label>
-                <input type="radio" name="question2"id="q2second" value="Masutatsu Oyama"/><label>Masutatsu Oyama</label>
-                <input type="radio" name="question2"id="q2third"  value="Gichin Funakoshi"/><label>Gihin Funakoshi</label>
+                <input type="radio" name="question2" id="q2first" value="Chojun Miyagi"/>  <label>  A--------> [  Chojun Miyagi    ]</label>
+                <input type="radio" name="question2"id="q2second" value="Masutatsu Oyama"/><label>  B--------> [  Masutatsu Oyama  ] </label>
+                <input type="radio" name="question2"id="q2third"  value="Gichin Funakoshi"/><label> C--------> [  Gichin Funakoshi ]</label>
            
             </div>
             <div>
                 <label>¿De que Area Geografica de china proviene el estilo de Kung Fu shaolin?</label>
-                <input type="radio" name="question3" id="q3first"  value="Del norte de China"/><label>Del norte de China</label>
-                <input type="radio" name="question3" id="q3second" value="Del centro de China"/><label>Del norte de China</label>
-                <input type="radio" name="question3" id="q3third"  value="Del Sur de China"/><label>Del norte de China</label>
+                <input type="radio" name="question3" id="q3first"  value="Del norte de China"/><label> A --------> [Del norte de China  ]</label>
+                <input type="radio" name="question3" id="q3second" value="Del centro de China"/><label>B --------> [Del centro de china ]</label>
+                <input type="radio" name="question3" id="q3third"  value="Del Sur de China"/><label>   C --------> [Del sur de china    ]</label>
             </div>
 
             <div>
             <label>¿Cual es el nombre del estilo de combate de esgrima de Ruronin Kenshin (Samurai X)?</label>
-                <input type="radio" name="question4" id="q4first"  value="Kyokugen Ryu"/><label>Kyokugen Ryu</label>
-                <input type="radio" name="question4" id="q4second" value="hokuto shinken Ryu"/><label>hokuto shinken Ryu</label>
-                <input type="radio" name="question4" id="q4third"  value="hiten mitsuruji Ryu"/><label>hiten mitsuruji Ryu</label>
+                <input type="radio" name="question4" id="q4first"  value="Kyokugen Ryu"/><label>        A --------> [Kyokugen Ryu]</label>
+                <input type="radio" name="question4" id="q4second" value="hokuto shinken Ryu"/><label>  B --------> [hokuto shinken Ryu]</label>
+                <input type="radio" name="question4" id="q4third"  value="hiten mitsuruji Ryu"/><label> C --------> [hiten mitsuruji Ryu]</label>
 
 
             </div>
@@ -90,12 +90,16 @@
                 
             </div>
 
-            <button onclick="quest1()"> Probar </button>
+            <button class= "container-fluid" onclick="quest1()"> Contestar Trivia </button>
             <div id='successMessage'></div>
-        </div>
-        <div class="container-fluid text-center">
-            <a href="./index.html">
-                Home</a>
-        </div>
+        
+        <div class="text-center container-fluid">
+            <div class= "d-flex flex-column" >
+              
+            <a href="./index.html" style="font-family:'Ceviche One', cursive !important; font-size: 40px;">
+                <img src="./iconosYrenders/logo-homeout.png" alt="ninja ok" style="width: 200px; height:200px;">
+                      Home 
+              </a>
+            </div>
     </body>
 </html>
