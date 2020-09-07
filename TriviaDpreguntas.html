@@ -9,11 +9,7 @@
     </head>
     <body>
         <script>
-            let q1 = 'Morihei Ueshiba';
-            let q2 = 'Masutatsu Oyama';
-            let q3 = 'Del norte de China';
-            let q4 = 'hiten mitsuruji Ryu';
-            let q5 = 'Jackye Chan';
+            
             let answer1 = document.getElementById("qFirst")
             function quest1()
             {
@@ -34,6 +30,17 @@
                 if (document.getElementById("q5second").checked){
                     puntaje +=20;
                 };
+
+                if (puntaje >= 60 ){
+                    var v = document.getElementById("successMessage"); 
+                    v.className += "alert alert-success";
+                    v.innerHTML = 'felicidades has ganado!'
+                }
+                else{
+                    var v = document.getElementById("successMessage"); 
+                    v.className += "alert alert-danger";
+                    v.innerHTML = 'Derrota!'
+                }
                 console.log(puntaje)
            }
          </script>
@@ -84,6 +91,7 @@
             </div>
 
             <button onclick="quest1()"> Probar </button>
+            <div id='successMessage'></div>
         </div>
         <div class="container-fluid text-center">
             <a href="./index.html">
